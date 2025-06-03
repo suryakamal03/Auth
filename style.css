@@ -1,0 +1,180 @@
+body{
+ background: #212121;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 100vh;
+}
+.card {
+  height: 600px;
+  width: 500px;
+ border-radius: 30px;
+ background: #212121;
+ box-shadow: 15px 15px 30px rgb(25, 25, 25),
+             -15px -15px 30px rgb(60, 60, 60);
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+/* From Uiverse.io by abrahamcalsin */ 
+.changepage {
+  position: absolute;
+  top:2%;
+  right: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #212121;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+}
+
+.changepage:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #ffd401;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+
+.changepage:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+.changepage span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 25px;
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
+.changepage:hover span {
+  color: #183153;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+/* From Uiverse.io by Yaseen549 */ 
+.input {
+  background-color: #212121;
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 5px;
+  margin-bottom: 16px;
+  color: #ffd401;
+  /* box-shadow: 3px 3px 2px rgb(249, 255, 85); */
+}
+
+.input:focus {
+  color: #ffd401;
+  background-color: #212121;
+  outline-color: #ffd401;
+  box-shadow: -3px -3px 15px #ffd401;
+  transition: .1s;
+  transition-property: box-shadow;
+}
+
+h1{
+  color:#ffd401;
+  text-shadow: 0 0 8px #ffd401, 0 0 15px #ffd401;
+
+}
+.loginpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 16px;
+}
+.signuppage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 16px; /* <- This adds vertical spacing between inputs */
+}
+.button {
+  margin-top: 20px;
+  text-decoration: none;
+  color: #000;
+  background: linear-gradient(45deg, #ffd401, #bfa200, #ffd401);
+  padding: 14px 60px;
+  border: 1px solid #ffd401;
+  color: #ffd401;
+  border-radius: 10px;
+  font-size: 1.25em;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  position: relative; /* or just remove 'position' */
+}
+
+.button span {
+  position: relative;
+  z-index: 1;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: #212121; /* Dark contrast background */
+  border-radius: 9px;
+  transition: 0.5s;
+}
+
+.button:hover::before {
+  opacity: 0.7;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  background: linear-gradient(45deg, #ffd401, #bfa200, #ffd401);
+  border-radius: 9px;
+  transition: 0.5s;
+  opacity: 0;
+  filter: blur(20px);
+}
+
+.button:hover::after {
+  opacity: 1;
+
+}
+.button:hover {
+  color: #DEDEDE;
+}
